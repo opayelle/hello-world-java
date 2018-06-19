@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: demo-hello-world-java
+spec:
+  host: demo-hello-world-java-hello-world-java.apps.manawa.dev.adeo.cloud
+  path: /
+  to:
+    kind: Service
+    name: demo-hello-world-java
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    host: demo-hello-world-java-hello-world-java.apps.manawa.dev.adeo.cloud
+    routerName: router
+    wildcardPolicy: None
