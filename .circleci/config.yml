@@ -71,7 +71,6 @@ jobs:
                     oc apply -f kubernetes/hello-world-service.yml
                     oc apply -f kubernetes/hello-world-route.yml
 
-
 workflows:
     version: 2
     build_and_deploy:
