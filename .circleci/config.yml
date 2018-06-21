@@ -61,7 +61,7 @@ jobs:
                 name: "Build and push docker image"
                 command: |
                     docker build -t ${DOCKER_REGISTRY_URL}/${PROJECT_NAME}/hello-world:latest .
-                    docker login -u ${CLUSTER_USERNAME} h-p $(oc whoami -t) ${DOCKER_REGISTRY_URL}
+                    docker login -u ${CLUSTER_USERNAME} -p $(oc whoami -t) ${DOCKER_REGISTRY_URL}
                     docker push ${DOCKER_REGISTRY_URL}/${PROJECT_NAME}/hello-world:latest
 
             - run:
